@@ -34,10 +34,42 @@ section {
     padding: 3rem;
 }
 
-.searchSystem {
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
+.searchSystem {
+    
 }
 
 .flagsContent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
 
+.flagsContent div {
+    padding: 1rem;
+    background-color: #c9c9c9;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.flagsContent div img {
+    width: 150px;
+    height: 100px;
+}
+
+/* FOOTER */
+footer {
+    width: 100vw;
+    background-color: #fff;
+    padding: 0.5rem;
+    text-align: center;
 }
