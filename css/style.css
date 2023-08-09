@@ -20,6 +20,16 @@ body {
     min-height: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #c9c9c9;
+}
+
 /* Header */
 
 header {
