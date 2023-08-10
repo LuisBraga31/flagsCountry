@@ -50,19 +50,38 @@ section {
 .content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
+}
+
+.searchContent {
+    display: flex;
+    justify-content: space-between;
+    background-color: wheat;
 }
 
 .searchSystem {
-    padding: 1.5rem;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    margin-left: 4%;
+}
+
+.searchSystem label {
+    position: absolute;
+    font-size: 22px;
+    top: 12px;
+    left: 10px;
 }
 
 .searchSystem input {
-    width: 250px;
-    border-radius: 5px;
-    padding: 0.6rem 1rem;
+    font-size: 18px;
+    outline: none;
+    width: 450px;
+    border-radius: 50px;
+    border: 1px solid #9cb3d2;
+    padding: 14px 30px 14px 50px;
+}
+
+i {
+    color: #9cb3d2;
 }
 
 .flagsContent {
