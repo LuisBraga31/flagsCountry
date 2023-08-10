@@ -56,7 +56,16 @@ section {
 .searchContent {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
 
+.searchByRegion{
+    padding-right: 5%;
+}
+
+.searchByRegion select{
+    width: 100px;
+    padding: 5px;
 }
 
 .searchSystem {
