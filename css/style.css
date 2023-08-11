@@ -41,10 +41,12 @@ header {
 
 main {
     width: 100%;
+    
 }
 
 section {
     padding: 3rem;
+    
 }
 
 .content {
@@ -83,7 +85,7 @@ section {
 .searchSystem input {
     font-size: 18px;
     outline: none;
-    width: 450px;
+    width: 30vw;
     border-radius: 50px;
     border: 1px solid #9cb3d2;
     padding: 14px 30px 14px 50px;
@@ -97,9 +99,15 @@ i {
     display: grid;
     grid-template-columns: repeat(auto-fit, 240px);
     justify-items: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
+}
+
+@media (max-width: 880px) {
+    .flagsContent {
+        justify-content:center;
+    }
 }
 
 .flagsContent div {
