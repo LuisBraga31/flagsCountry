@@ -12,7 +12,9 @@ let teste = [];
 function getAllCountries() {
     fetch(api)
     .then(response => response.json())
+    
     .then(data => {
+        console.log(data)
         data.map( (data) => {
             countries.push(data);
 
@@ -99,11 +101,21 @@ inputSearch.oninput = () => {
 
 function addHTML(item) {
     const div = document.createElement("div");
+    let capital = item.capital;
 
+    
     div.innerHTML += `
         
         <img src="${item.flags.png}" alt="" srcset=""> 
-        <p> ${item.name.common} </p>
+        <div class = "country_text">
+            <p class="country_title"> ${item.name.common} </p>
+            <p class="contry_inf"> Capital: <span> ${capital} </span> </p>
+            <p class="contry_inf"> Continent: <span> ${item.continents} </span> </p>
+            <p class="contry_inf"> Region: <span> ${item.region} </span> </p>
+            <p class="contry_inf"> Population: <span> ${item.population} </span> </p>
+
+        </div>
+        
         
     
     `

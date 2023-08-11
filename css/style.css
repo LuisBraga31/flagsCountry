@@ -123,7 +123,7 @@ i {
     }
 }
 
-.flagsContent div {
+.flagsContent > div {
     padding: 1rem;
     background-color: #FFFAFA;
     box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3);
@@ -141,11 +141,34 @@ i {
     border: 1px solid black;
 }
 
-.flagsContent p {
-    height: 40px;
-    font-size: 1rem;
-    text-align: center;
+.country_text {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
 }
+
+.country_text p {
+    font-weight: bold;
+    height: 30px;
+    text-align: left;
+}
+
+.country_title {
+    font-size: 1rem;
+    padding-bottom: 2.5rem;  
+}
+
+.contry_inf {
+    font-size: 0.8rem;
+}
+
+.contry_inf span{
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
 
 /* FOOTER */
 footer {
