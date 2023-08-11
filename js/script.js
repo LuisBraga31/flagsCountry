@@ -13,7 +13,6 @@ function getAllCountries() {
     fetch(api)
     .then(response => response.json())
     .then(data => {
- 
         data.map( (data) => {
             countries.push(data);
 
@@ -37,9 +36,6 @@ function getAllCountries() {
             addHTML(countries[i]);
             busca.push(countries[i]);
         }
-
-        
-
 
     });
 
