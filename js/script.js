@@ -6,7 +6,7 @@ let api = 'https://restcountries.com/v3.1/all';
 
 let busca = [];
 let countries = [];
-
+let teste = [];
 // Subindo os países no Content
 
 function getAllCountries() {
@@ -49,7 +49,6 @@ getAllCountries();
 // Função de escolher países por Estado
 
 function chooseCountryByRegion() {
-    
     contentFlags.innerHTML = "";
     
     if (selectCountry.value === "All") {
@@ -59,32 +58,41 @@ function chooseCountryByRegion() {
         }
     
     } else {
-
+        teste = [];
         for(let i = 0; i < busca.length; i++) {
         
             if(selectCountry.value === busca[i].region) {
                 addHTML(busca[i]);
+                teste.push(busca[i]);
+                console.log(teste);
             }
         }
-    
+
     }
-
-
 }
 
 selectCountry.addEventListener('change', () => chooseCountryByRegion());
 
-
-
-
 // Sistemas de Busca, onde quando escreve o sistema é ativado.
 inputSearch.oninput = () => {
+
     contentFlags.innerHTML = "";
-    busca
-      .filter((item) =>
-        item.name.common.toLowerCase().includes(inputSearch.value.toLowerCase())
-      ).forEach((item) => addHTML(item));
-      
+
+    if(selectCountry.value === "All") {
+        
+        busca      
+        .filter((item) =>
+            item.name.common.toLowerCase().includes(inputSearch.value.toLowerCase())
+        ).forEach((item) => addHTML(item));
+
+    } else {
+
+        teste
+          .filter((item) =>
+            item.name.common.toLowerCase().includes(inputSearch.value.toLowerCase())
+          ).forEach((item) => addHTML(item));
+    }
+ 
 };
 
 // Adicionando Item ao HTML
