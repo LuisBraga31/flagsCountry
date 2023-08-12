@@ -102,7 +102,11 @@ inputSearch.oninput = () => {
 function addHTML(item) {
     const div = document.createElement("div");
     let capital = item.capital;
-
+    if(item.capital != undefined) {
+        if(item.capital.length === 3) {
+            capital = item.capital[0];
+        }
+    }
     
     div.innerHTML += `
         
